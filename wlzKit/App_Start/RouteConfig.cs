@@ -16,7 +16,7 @@ namespace wlzKit
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "TextHelper", action = "EncodingGb2312", id = UrlParameter.Optional }
             );
         }
     }

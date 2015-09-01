@@ -1,0 +1,5 @@
+F:\MyProject\wlzKit\wlzCommon\bin\Debug\wlzCommon.dll
+F:\MyProject\wlzKit\wlzCommon\bin\Debug\wlzCommon.pdb
+F:\MyProject\wlzKit\wlzCommon\obj\Debug\wlzCommon.csprojResolveAssemblyReference.cache
+F:\MyProject\wlzKit\wlzCommon\obj\Debug\wlzCommon.dll
+F:\MyProject\wlzKit\wlzCommon\obj\Debug\wlzCommon.pdb

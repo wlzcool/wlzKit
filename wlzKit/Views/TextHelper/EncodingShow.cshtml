@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section style
+{
+
+}
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <h1 class="page-header">中文编解码</h1>
+        </div>
+        <div class="col-lg-6">
+            <form role="form">
+                <div class="form-group">
+                    <textarea id="txtNeedChange" class="form-control" rows="3" placeholder="中文"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <select id="sltEncodingType" class="form-control input-sm" aria-controls="dataTables-example" name="dataTables-example_length">
+                            <option value="g">GB2312</option>
+                            <option value="u">utf-8</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="btn btn-sm " id="btnDecode" type="button" value="转换">
+                        <input class="btn btn-sm " id="btnEncode" type="button" value="反转">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="txtResult" class="form-control" rows="3" placeholder="Gb2312编码"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+@section script{
+    <script type="text/javascript">
+        $(function () {
+            $("#btnDecode").click(function () {
+                sendText("e");
+            });
+            $("#btnEncode").click(function () {
+                sendText("d");
+            });
+        });
+
+        function sendText(type) {
+            var text = "";
+            if ("e" == type) {
+                text = $("#txtNeedChange").val();
+            } else {
+                text = $("#txtResult").val();
+            }
+            var data = {
+                text: text,
+                type: type,
+                encodingType: $("#sltEncodingType").val()
+            };
+            $.ajax({
+                type: 'POST',
+                url: "/TextHelper/EncodingText",
+                timeout: 1000 * 1000,
+                dataType: 'json',
+                data: data,
+                success: function (result) {
+                    if (result != null && result.state == 'Success') {
+                        if (result.data != null) {
+                            if ("e" == type) {
+                                $("#txtResult").val(result.data);
+                            } else {
+                                $("#txtNeedChange").val(result.data);
+                            }
+                        }
+                    } else {
+                        alert(result.message);
+                    }
+                }
+            });
+        }
+    </script>
+}
