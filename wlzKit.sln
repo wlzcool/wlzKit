@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wlzKit", "wlzKit\wlzKit.csproj", "{418847E4-D5D3-40F0-93F5-BBA3CD1D41B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wlzCommon", "wlzCommon\wlzCommon.csproj", "{93DFE486-77C9-4337-8C95-AF0901FFEAC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{418847E4-D5D3-40F0-93F5-BBA3CD1D41B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418847E4-D5D3-40F0-93F5-BBA3CD1D41B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{418847E4-D5D3-40F0-93F5-BBA3CD1D41B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DFE486-77C9-4337-8C95-AF0901FFEAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DFE486-77C9-4337-8C95-AF0901FFEAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DFE486-77C9-4337-8C95-AF0901FFEAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DFE486-77C9-4337-8C95-AF0901FFEAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
